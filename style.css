@@ -181,3 +181,14 @@ body{
     gap: 40px;
   }
 }
+.footer-right img {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-right img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
