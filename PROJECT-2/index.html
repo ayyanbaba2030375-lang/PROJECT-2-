@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitHub CLI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+/* ================= DARK SECTION ================= */
+body{
+    background:#0d1117;
+    color:#e6edf3;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+}
+
+.logo img{width:24px}
+
+.nav-links a{
+    color:#c9d1d9;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.nav-links a:hover{color:#fff}
+
+/* HERO */
+.hero{
+    max-width:900px;
+    margin:120px auto 80px;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:800;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#8b949e;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#fff;
+    color:#000;
+    padding:14px 26px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.install-link{
+    display:block;
+    margin-top:14px;
+    color:#58a6ff;
+    font-size:14px;
+    text-decoration:none;
+}
+
+/* CLI HEADING */
+.cli-title{
+    text-align:center;
+    margin-top:100px;
+}
+
+.cli-title .cmd{
+    font-family:monospace;
+    color:#58a6ff;
+}
+
+.cli-title p{
+    color:#8b949e;
+    margin-top:8px;
+}
+
+/* TERMINAL */
+.terminal{
+    max-width:900px;
+    margin:40px auto 120px;
+    background:#010409;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+.terminal-header{
+    display:flex;
+    gap:8px;
+    padding:12px;
+    background:#0d1117;
+}
+
+.dot{width:12px;height:12px;border-radius:50%}
+.red{background:#ff5f56}
+.yellow{background:#ffbd2e}
+.green{background:#27c93f}
+
+.terminal-body{
+    padding:20px;
+    font-family:monospace;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.prompt{color:#c9d1d9}
+.success{color:#3fb950}
+.issue{color:#7ee787}
+.comment{color:#8b949e}
+
+/* ================= LIGHT SECTION ================= */
+.light{
+    background:#ffffff;
+    color:#24292f;
+    padding:120px 40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.light h2{
+    font-size:56px;
+    font-weight:800;
+    line-height:1.15;
+    margin-bottom:60px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.feature h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    font-size:14px;
+    color:#57606a;
+    margin-bottom:10px;
+}
+
+.feature a{
+    color:#0969da;
+    font-size:14px;
+    text-decoration:none;
+}
+
+/* CTA */
+.cta{
+    margin-top:120px;
+    padding:80px 20px;
+    text-align:center;
+    background:#f6f8fa;
+}
+
+.cta h3{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#57606a;
+    margin-bottom:20px;
+}
+
+.cta .btn{
+    background:#24292f;
+    color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="Screenshot 2025-12-31 130830.png">
+        <span>CLI</span>
+    </div>
+    <div class="nav-links">
+        <a href="#">Manual</a>
+        <a href="#">Release notes</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Take GitHub to the<br>command line</h1>
+    <p>GitHub CLI brings GitHub to your terminal. Free and open source.</p>
+    <a class="btn" href="#">Download for Windows</a>
+    <a class="install-link" href="#">View installation instructions →</a>
+</div>
+
+<!-- CLI -->
+<div class="cli-title">
+    <div class="cmd">$ gh alias set</div>
+    <p>Create a shortcut for a gh command.</p>
+</div>
+
+<div class="terminal">
+    <div class="terminal-header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+    </div>
+    <div class="terminal-body">
+        <div class="prompt">$ gh alias set bugs "issue list --label=bugs"</div>
+        <div class="comment">Adding alias for bugs: issue list --label="bugs"</div>
+        <div class="success">✓ Added alias.</div><br>
+        <div class="prompt">$ gh bugs</div><br>
+        <div class="comment">Showing 2 of 7 issues in cli/cli</div>
+        <div class="issue">#19 Pagination request returns empty JSON (bug)</div>
+        <div class="issue">#21 Error raised when passing valid parameters (bug)</div>
+    </div>
+</div>
+
+<!-- LIGHT SECTION -->
+<section class="light">
+<div class="container">
+    <h2>Goodbye, context switching.<br>Hello, terminal.</h2>
+
+    <div class="features">
+        <div class="feature">
+            <h3>Your entire GitHub workflow</h3>
+            <p>Work with issues, pull requests, checks, releases and more.</p>
+            <a href="#">View all GitHub CLI commands →</a>
+        </div>
+
+        <div class="feature">
+            <h3>Script and customize</h3>
+            <p>Call the GitHub API to script almost any action.</p>
+            <a href="#">Learn about aliases and API →</a>
+        </div>
+
+        <div class="feature">
+            <h3>Enterprise-ready</h3>
+            <p>Connect to GitHub Enterprise Server.</p>
+            <a href="#">Get set up with Enterprise →</a>
+        </div>
+
+        <div class="feature">
+            <h3>We ❤️ community</h3>
+            <p>GitHub CLI is open source and ready for contributions.</p>
+            <a href="#">Contribute to CLI →</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+    <h3>Try GitHub on the command line</h3>
+    <p>GitHub CLI brings GitHub to your terminal.</p>
+    <a class="btn" href="#">Download for Windows</a>
+    <br><br>
+    <a class="install-link" href="#">View installation instructions →</a>
+</div>
+<!-- FOOTER -->
+<footer class="github-footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <h2>GitHub</h2>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#">Features</a>
+        <a href="#">Security</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Customer stories</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#">Developer API</a>
+        <a href="#">Partners</a>
+        <a href="#">GitHub Desktop</a>
+        <a href="#">GitHub Mobile</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help</a>
+        <a href="#">Community Forum</a>
+        <a href="#">Expert Services</a>
+        <a href="#">Status</a>
+        <a href="#">Contact GitHub</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Shop</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-left">
+      © 2026 GitHub, Inc.
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+      <a href="#">▶️</a>
+      <a href="#">💼</a>
+      <a href="#">🐙</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+
+
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body{
+    background: radial-gradient(ellipse at top, #161b22, #0d1117);
+    color:#e6edf3;
+    min-height:100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+}
+
+.logo img{
+    width:24px;
+}
+
+.nav-links a{
+    color:#c9d1d9;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#ffffff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    max-width:900px;
+    margin:120px auto 0;
+    padding:0 20px;
+    text-align:left;
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#8b949e;
+    margin-bottom:35px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    background:#ffffff;
+    color:#000000;
+    padding:14px 26px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#e6e6e6;
+}
+
+/* ===== INSTALL LINK ===== */
+.install-link{
+    display:block;
+    margin-top:14px;
+    color:#58a6ff;
+    font-size:14px;
+    text-decoration:none;
+}
+
+.install-link:hover{
+    text-decoration:underline;
+}
+/* ================= FOOTER ================= */
+
+.github-footer {
+  background: #ffffff;
+  padding: 80px 60px 30px;
+  color: #57606a;
+}
+
+.footer-container {
+  display: flex;
+  gap: 80px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #24292f;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 60px;
+  flex: 1;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #24292f;
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: #57606a;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #0969da;
+  text-decoration: underline;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid #d0d7de;
+  margin-top: 60px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-left a {
+  margin-left: 12px;
+  color: #57606a;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-right a {
+  margin-left: 16px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #57606a;
+}
+
+.footer-right a:hover {
+  color: #24292f;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
